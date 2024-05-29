@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <button>click</button>
+    <p>Hello world!</p>
+    <script>
+        $("button").click(function() {
+            // alert();
+            $("p").css("background","red");
+            $("p").css("font-Size","40px");
+            $("p").css("border","solid");
+            $("p").width("200").height("200");
+            $("p").text("<b>Hello</b>");
+            $("p").html("<b>Hello</b>");
+            $("p").animate({
+                "margin-left":"200px",
+                "border-radius":"20px",
+                "transform":"rotate(20deg)"
+           
+            },2000)
+        });
+    </script>

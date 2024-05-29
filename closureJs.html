@@ -1,0 +1,58 @@
+<script>
+    function f1(a){
+       return function (b){
+            return function (c){
+
+            }
+        }
+    }
+    f1(100)(200)(300);//currying effect 
+    console.log(a+b+c);
+</script>
+
+let subject1 = parseFloat(prompt("Enter the marks for subject 1:"));
+let subject2 = parseFloat(prompt("Enter the marks for subject 2:"));
+let subject3 = parseFloat(prompt("Enter the marks for subject 3:"));
+
+
+let totalMarks = subject1 + subject2 + subject3;
+
+
+let percentage1 = (subject1 / totalMarks) * 100;
+let percentage2 = (subject2 / totalMarks) * 100;
+let percentage3 = (subject3 / totalMarks) * 100;
+
+
+console.log("Subject 1 percentage: " + percentage1.toFixed(2) + "%");
+console.log("Subject 2 percentage: " + percentage2.toFixed(2) + "%");
+console.log("Subject 3 percentage: " + percentage3.toFixed(2) + "%");
+
+
+let ctx = document.getElementById('myChart').getContext('2d');
+let myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Subject 1', 'Subject 2', 'Subject 3'],
+        datasets: [{
+            label: '# of Votes',
+            data: [percentage1, percentage2, percentage3],
+            backgroundColor: [
+                '#FF6384',
+                '#36A2EB',
+                '#FFCE56'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            title: {
+                display: true,
+                text: 'Subject Marks Percentage'
+            }
+        }
+    }
+});
+

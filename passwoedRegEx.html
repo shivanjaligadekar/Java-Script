@@ -1,0 +1,19 @@
+<!-- Small alpha
+    number
+    capital aplpha
+    special char
+    min 4 ane max 8
+    hello@11
+    .-- each will select
+    ?=current char onward 
+    *=anywhere in the  string
+ -->
+ <script>
+    //
+    console.log("felix D\"souza");
+    var regex=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\-]).{4,8}$/;
+    var PANcard="shiVa@11";
+    var result=regex.test(PANcard)
+    console.log(result)
+    
+</script>

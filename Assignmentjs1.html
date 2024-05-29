@@ -1,0 +1,24 @@
+<!-- <script>
+    var record="Hello world!";
+    function searchVowels(text) {
+    const vowels = text.match(/[aeiou]/gi);
+    return vowels ? vowels : [];
+}
+const vowelsInRecord = searchVowels(record);
+console.log("Vowels in the string:", vowelsInRecord.join(', '));
+</script> -->
+<script>
+    var record = "Hello world!";
+    function searchVowels(text) {
+        const vowels = [];
+        for (let i = 0; i < text.length; i++) {
+            if (/[aeiou]/i.test(text[i])) {
+                vowels.push(text[i]);
+            }
+        }
+        return vowels;
+    }
+    const vowelsInRecord = searchVowels(record);
+    console.log("Vowels in the string:", vowelsInRecord.join(', '));
+    console.log("Numbers of vowels:", vowelsInRecord.length)
+</script>

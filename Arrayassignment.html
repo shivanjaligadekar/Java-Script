@@ -1,0 +1,16 @@
+<script>
+    var arr =[10,49,22,18,91,28]
+    var highest = 1;
+    var secondHighest = 1;
+    arr.forEach(function(num) {
+    if (num > highest) {
+        secondHighest = highest;
+        highest = num;
+    } else if (num > secondHighest && num !== highest) {
+        secondHighest = num;
+    }
+});
+
+console.log("Highest number:", highest);
+console.log("Second highest number:", secondHighest);
+</script>
